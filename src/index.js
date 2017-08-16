@@ -225,12 +225,16 @@ class Game extends React.Component {
           	onClick = {(i) => this.handleClick(i)}
           />
         </div>
+        {/*
         <div className="game-info">
           <ol>{moves}</ol>
         </div>
+        */}
+        <br />
         <div className="tick-button">
           <button 
-            onClick = {(this.handleTick)}>{tick}
+            className="tick-button"
+            onClick = {(this.handleTick)}>Tick: {tick}
           </button>
         </div>
       </div>

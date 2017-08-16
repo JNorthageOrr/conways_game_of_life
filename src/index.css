@@ -68,12 +68,23 @@ ol, ul {
 .kbd-navigation .square:focus {
   background: #ddd;
 }
-
+/*
+display:flex;
+flex-direction: row;
+*/
 .game {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  height: 530px;
 }
-
+.game-board {
+  height: 330px;
+}
 .game-info {
   margin-left: 20px;
+}
+.tick-button {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 100px;
 }
