@@ -163,6 +163,9 @@ class Game extends React.Component {
     };
     this.handleTick = this.handleTick.bind(this);
   }
+  componentDidMount() {
+    
+  }
   jumpTo(step) {
   	this.setState({
   		stepNumber: step,
@@ -201,6 +204,17 @@ class Game extends React.Component {
       
     });
   }
+  runGame(){
+    timerId;
+/*    let timerId = setInterval( () => {
+        {this.handleTick};
+        console.log('timerId: ' + timerId)
+      }, 2000);
+    setTimeout(() => {
+      clearInterval(timerId);
+    }, 20000);
+    timerId();*/
+  }
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -226,16 +240,25 @@ class Game extends React.Component {
           />
         </div>
         {/*
+        //  
         <div className="game-info">
           <ol>{moves}</ol>
         </div>
         */}
         <br />
-        <div className="tick-button">
-          <button 
-            className="tick-button"
-            onClick = {(this.handleTick)}>Tick: {tick}
-          </button>
+        <div className="control-buttons">
+          <div className="tick-button">
+            <button 
+              className="tick-button"
+              onClick = {(this.handleTick)}>Tick: {tick}
+            </button>
+          </div>
+          <div className="run-button">
+            <button 
+              className="run-button"
+              onClick = { (this.runGame) }>Run Game: {tick}
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -248,6 +271,15 @@ ReactDOM.render(
   <Game />,
   document.getElementById('root')
 );
+
+  let timerId = setInterval( () => {
+                  Game.handleTick;
+                  console.log('timerId: ' + timerId)
+                }, 2000);
+      setTimeout(() => {
+        clearInterval(timerId);
+      }, 20000);
+  
 
 function calculateLife(squares) {
   let accumulator = Array(100).fill(0);
