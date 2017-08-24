@@ -19,7 +19,7 @@ class Boardsize extends React.Component {
 	}
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form className="gameForm" onSubmit={this.handleSubmit}>
 				<label>
 					Pick board size: 
 					<select value={this.state.value} onChange={this.handleChange}>

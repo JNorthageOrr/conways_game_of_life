@@ -1,0 +1,15 @@
+.navbar {
+	background-color: #000;
+	height: 50px;
+}
+li {
+	position: relative;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+a {
+	list-style: none;
+	text-decoration: none;
+	color: #fff;
+}
