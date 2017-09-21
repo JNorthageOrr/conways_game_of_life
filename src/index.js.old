@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
+import './index.css';
 import classnames from 'classnames';
 import Board from './components/board';
 import Boardsize from './components/boardsize';
@@ -10,16 +10,7 @@ class Game extends React.Component {
     super();
     this.state = {
       history: [{
-        squares: Array(Array(10).fill(0,0,10), 
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10),
-                       Array(10).fill(0,0,10))
+        squares: Array(99).fill(0),
       }],
       stepNumber: 0,
       tick: 0,
