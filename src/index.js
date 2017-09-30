@@ -25,21 +25,25 @@ class Game extends React.Component {
       tick: 0,
     };
     this.handleTick = this.handleTick.bind(this);
+    //this.handleClick = this.handleClick.bind(this)
+    
   }
   componentDidMount() {
-    
+
   }
   jumpTo(step) {
   	this.setState({
   		stepNumber: step,
   	});
   }
-  handleClick(i) {
+  handleClick(indexValue) {
   	const history = this.state.history.slice(0, this.state.stepNumber + 1);
   	const current = history[history.length -1];
   	const squares = current.squares.slice();
   	
-  	squares[i] = 1;
+    console.log(indexValue)
+
+  	squares[indexValue[0], indexValue[1] ] = 1;
   	this.setState({
   		history: history.concat([{
   			squares: squares,
@@ -67,21 +71,13 @@ class Game extends React.Component {
       
     });
   }
-  runGame(){
-    timerId;
-/*    let timerId = setInterval( () => {
-        {this.handleTick};
-        console.log('timerId: ' + timerId)
-      }, 2000);
-    setTimeout(() => {
-      clearInterval(timerId);
-    }, 20000);
-    timerId();*/
-  }
+  
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const tick = this.state.tick;
+
+    //let handleClick = this.handleClick.bind(this, indexValue)
 
     const moves = history.map((step, move) => {
     	const desc = move ?
@@ -99,7 +95,7 @@ class Game extends React.Component {
         <div className="game-board">
           <Board 
           	squares = {current.squares}
-          	onClick = {(i) => this.handleClick(i)}
+          	onClick={(indexValue) => this.handleClick(indexValue)}
           />
         </div>
         {/*
@@ -136,13 +132,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-  let timerId = setInterval( () => {
-                  Game.handleTick;
-                  console.log('timerId: ' + timerId)
-                }, 2000);
-      setTimeout(() => {
-        clearInterval(timerId);
-      }, 20000);
   
 
 function calculateLife(squares) {

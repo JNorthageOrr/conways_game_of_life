@@ -1,22 +1,24 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-export default React.createClass({
-	componentDidMount(){
-		require('../style.css');
-	},
+class Square extends React.Component {
+	
 	render() {
 
   		let classes = this.props.value > 0 ? 'X' : 'O'; 
-  		/*if (classes === 0){
-  			var valued = 'O';
-  		} else {
-  			var valued = 'X';
-  		}*/
+  		let indexValue = [this.props.rowNumber, this.props.elementId]
+
+  		//console.log('indexValue1: ')
+  		//console.log(this.props.rowNumber)
+  		//console.log('indexValue2: ')
+  		//console.log(this.props.elementId)
+  		//console.log(indexValue)
   		return (
-			<button className={classes}>
+			<button className={classes} rowNumber = {this.props.rowNumber} elementId = {this.props.elementId} onClick={(indexValue) => this.props.onClick(indexValue)}>
 		  		{classes}
 		    </button>
 		);
 	}
-})
+}
+
+export default Square;
