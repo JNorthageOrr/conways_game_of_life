@@ -5,19 +5,15 @@ import Square from './square';
 let iterator = 0;
 
 function renderRow(squares, props) { 
-      //var rowArray = this.props.squares[i];
-      //console.log('rowArray: ')
-      //console.log(rowArray)
-      //rowArray.forEach(function(squareArray){
-        //console.log('squareArray: ')
-        //console.log(squareArray)    
+      //console.log(props)
+      //props.handleClick("8,4") 
     return squares.map((square, index) => {
     	return (
 	        <Square
 	            elementId = {index}
 	            rowNumber = {props.rowNumber}
 	            value={square}
-	            onClick={(indexValue) => props.onClick(indexValue)}
+	            onClick={props.onClick}
 	        />
     	)
     });	
@@ -28,6 +24,7 @@ class Row extends React.Component {
 	render() {
 		let squares = this.props.squares; 
 		let classNumber = "row" + this.props.rowNumber 
+		//let handleClick 
 		//let clickHandler = this.props.handleClick;
 		//let clickHandler = {() => this.handleClick()}
 		return (
