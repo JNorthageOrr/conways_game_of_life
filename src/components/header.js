@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../css/header.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../css/header.css';
 
 const Header = () => (
   <header>
@@ -11,6 +11,6 @@ const Header = () => (
       </ul>
     </nav>
   </header>
-)
+);
 
-export default Header
+export default Header;

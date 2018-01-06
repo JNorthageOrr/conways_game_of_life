@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Game from './game'
-import '../css/landing.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Game from './game';
+import '../css/landing.css';
 
 
 const Landing = () => (
@@ -23,6 +23,6 @@ const Landing = () => (
     	<Game className="introGame"/>
     </div>
   </div>
-)
+);
 
-export default Landing
+export default Landing;
