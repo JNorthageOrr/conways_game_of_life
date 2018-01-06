@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+//import React from 'react';
 import Row from './row';
 import Square from './square';
 

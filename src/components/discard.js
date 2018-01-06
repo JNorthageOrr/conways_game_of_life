@@ -2,7 +2,33 @@ import React from 'react';
 import Row from './row';
 import Square from './square';
 
-
+//handleSize: 
+this.setState({
+      history: [{
+        squares: Array(Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size),
+                       Array(size).fill(0,0,size))  
+                       
+      }],
+      boardsize: parseInt(event.target.value),
+    });
 
 class Board extends React.Component {
 

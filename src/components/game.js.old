@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import classnames from 'classnames';
-import Board from './components/board';
-import Boardsize from './components/boardsize';
+import Board from './board';
+import Boardsize from './boardsize';
 
 class Game extends React.Component {
   constructor() {
@@ -119,13 +116,6 @@ class Game extends React.Component {
     );
   }
 }
-
-// ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
 
   let timerId = setInterval( () => {
                   Game.handleTick;
@@ -335,3 +325,6 @@ function calculateLife(squares) {
   return newSquares;
 }
 
+Game.propTypes = {};
+
+export default Game;
