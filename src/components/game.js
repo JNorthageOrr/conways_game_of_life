@@ -126,10 +126,20 @@ class Game extends React.Component {
         
         <br />
         <div className="control-buttons">
+          <div className="size-button">
+            <form onSubmit={(event, history) => this.handleSize(this.state.value, this.state.history)}>
+              <label> 
+                <select value={this.state.value} onChange={(event, history) => this.handleSize(event, history)}>
+                  <option value="10">Board Size: 10x10</option>
+                  <option value="20">Board Size: 20x20</option>
+                </select>
+              </label>
+            </form>
+          </div> 
           <div className="tick-button">
             <button 
               className="tick-button"
-              onClick = {(this.handleTick)}>Tick: {tick}        
+              onClick = {(this.handleTick)}>Move: {tick}        
             </button>
           </div>
           <div className="run-button">
@@ -138,18 +148,6 @@ class Game extends React.Component {
               onClick = { (this.runGame) }>Run Game: {tick}
             </button>
           </div>
-          <div className="size-button">
-            <form onSubmit={(event, history) => this.handleSize(this.state.value, this.state.history)}>
-              <label>
-                Pick board size: 
-                <select value={this.state.value} onChange={(event, history) => this.handleSize(event, history)}>
-                  <option value="10">10x10</option>
-                  <option value="20">20x20</option>
-                </select>
-              </label>
-              
-            </form>
-          </div> 
         </div>
       </div>
     );

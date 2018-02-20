@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Home from './home'
-import Game from './game'
-import Landing from './landing'
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './home';
+import Game from './game';
+import Landing from './landing';
 
 const Main = () => (
 	<main>
@@ -12,6 +12,6 @@ const Main = () => (
 			<Route exact path='/game' component={Game}/>
 		</Switch>
 	</main>
-)
+);
 
-export default Main
+export default Main;

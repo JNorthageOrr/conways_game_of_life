@@ -15,14 +15,29 @@
 	padding-top: 20px;
 }
 .game {
-	margin-left: 30%;
+
 	margin-top: 30px;
 }
+/* 
+	margin-left: 30%;
 .control-buttons {
 	width: 60%;
 }
+*/
+.control-buttons {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.size-button {
+	display: inline-block;
+	margin-right: 10px;
+}
+.size-button select{
+	height: 50px;
+}
 .tick-button {
-	margin: 0 auto;
+	display: inline-block;
 }
 .run-button {
 	display: none;

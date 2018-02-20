@@ -22,10 +22,9 @@ class Boardsize extends React.Component {
 		return (
 			<form className="gameForm" onSubmit={this.handleSubmit}>
 				<label>
-					Pick board size: 
 					<select value={this.state.value} onChange={this.handleChange}>
-						<option value="10">10x10</option>
-						<option value="20">20x20</option>
+						<option value="10">Board Size: 10x10</option>
+						<option value="20">Board Size: 20x20</option>
 					</select>
 				</label>
 				<input type="submit" value="set" />

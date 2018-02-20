@@ -72,15 +72,14 @@ ol, ul {
   background: #ddd;
 }
 /*
-display:flex;
-flex-direction: row;
+
 */
 .game {
   display: block;
   height: 530px;
 }
 .game-board {
-  height: 330px;
+  min-height: 330px;
 }
 .game-info {
   margin-left: 20px;
