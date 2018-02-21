@@ -2,7 +2,7 @@
   "name": "conways_game_of_life",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jnorthageorr.github.io/conways_game_of_life",
+  "homepage": "https://localhost:5000",
   "dependencies": {
     "classnames": "2.2.5",
     "react": "^15.6.1",
