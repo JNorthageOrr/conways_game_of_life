@@ -5,6 +5,7 @@
   "homepage": "https://localhost:5000",
   "dependencies": {
     "classnames": "2.2.5",
+    "jquery": "^3.3.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.2.0",
@@ -21,5 +22,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001"
+    }
   }
 }

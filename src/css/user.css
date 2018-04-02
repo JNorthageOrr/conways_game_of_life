@@ -1,0 +1,30 @@
+.forms {
+	flex: 2;
+	padding-left: 12%;
+	padding-top: 20px;
+	vertical-align: text-top;
+	background-color: lightblue;
+}
+.or {
+	min-width: 14vw;
+}
+.or h1{
+	text-align:center;
+	margin: 50%;
+}
+.login {
+
+}
+.signUp {
+	
+}
+.flex-grid {
+	margin-top: 40px;
+	min-width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+.col {
+	flex: 1;
+	justify-content: space-between;
+}

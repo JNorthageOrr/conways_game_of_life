@@ -2,11 +2,18 @@
 	background-color: #000;
 	height: 50px;
 }
+ul {
+	display: inline-block;
+}
+.loginLink {
+	float: right;
+	margin-right: 35px;
+}
 li {
 	position: relative;
 	display: inline-block;
 	margin-left: 20px;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 a {
 	list-style: none;
