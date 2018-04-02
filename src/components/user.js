@@ -10,11 +10,12 @@ class App extends Component {
     this.state = {bananasReceived: ""}
     this.getBananas = this.getBananas.bind(this)
   }
+  //changed from port 3000 to 5000
   getBananas() {
     let token = "Bearer " + localStorage.getItem("jwt")
     console.log(token)
     $.ajax({
-      url: "http://localhost:3000/api/patterns",
+      url: "http://localhost:5000/api/patterns",
       type: "GET",
       beforeSend: function(xhr)
       {xhr.setRequestHeader('Authorization', token) },
@@ -24,13 +25,14 @@ class App extends Component {
       }
     })
   }
+  //changed from port 3000 to 5000
   login () {
       const email = $("#email").val()
       const password = $("#password").val()
       const request = {"auth": {"email": email, "password": password}}
       console.log(request)
       $.ajax({
-        url: "http://localhost:3000/api/user_token",
+        url: "http://localhost:5000/api/user_token",
         type: "POST",
         data: request,
         dataType: "json",
@@ -54,8 +56,9 @@ class App extends Component {
       					  		   }
       					 }
       console.log(newRequest)
+      //changed from port 3000 to 5000
       $.ajax({
-        url: "http://localhost:3000/api/signup",
+        url: "http://localhost:5000/api/signup",
         type: "POST",
         data: newRequest,
         dataType: "json",
