@@ -14,7 +14,7 @@ class App extends Component {
     let token = "Bearer " + localStorage.getItem("jwt")
     console.log(token)
     $.ajax({
-      url: "http://localhost/api/patterns",
+      url: "http://localhost:3000/api/patterns",
       type: "GET",
       beforeSend: function(xhr)
       {xhr.setRequestHeader('Authorization', token) },
@@ -31,7 +31,7 @@ class App extends Component {
       const request = {"auth": {"email": email, "password": password}}
       console.log(request)
       $.ajax({
-        url: "http://localhost/api/user_token",
+        url: "http://localhost:3000/api/user_token",
         type: "POST",
         data: request,
         dataType: "json",
