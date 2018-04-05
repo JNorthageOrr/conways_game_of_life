@@ -15,7 +15,7 @@ class App extends Component {
     let token = "Bearer " + localStorage.getItem("jwt")
     console.log(token)
     $.ajax({
-      url: "http://localhost:3000/api/patterns",
+      url: "http://45.55.72.9:3000/api/patterns",
       type: "GET",
       beforeSend: function(xhr)
       {xhr.setRequestHeader('Authorization', token) },
@@ -32,7 +32,7 @@ class App extends Component {
       const request = {"auth": {"email": email, "password": password}}
       console.log(request)
       $.ajax({
-        url: "http://localhost:3000/api/user_token",
+        url: "http://45.55.72.9:3000/api/user_token",
         type: "POST",
         data: request,
         dataType: "json",
@@ -43,7 +43,7 @@ class App extends Component {
         error: function(jqXHR, exception) {
           var msg = '';
           if (jqXHR.status === 0) {
-              msg = 'Not connect.\n Verify Network.';
+              msg = 'Not connected.\n Verify Network.';
           } else if (jqXHR.status == 404) {
               msg = 'Requested page not found. [404]';
           } else if (jqXHR.status == 500) {
@@ -57,7 +57,8 @@ class App extends Component {
           } else {
               msg = 'Uncaught Error.\n' + jqXHR.responseText;
           }
-          $('#post').html(msg);
+          console.log(msg);
+          console.log(jqXHR);
         }
       })
       
