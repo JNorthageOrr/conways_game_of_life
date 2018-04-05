@@ -10,8 +10,8 @@ class Header extends React.Component {
 		//this.loginSuccess = this.loginSuccess.bind(this)
 		this.logoutSuccess = this.logoutSuccess.bind(this)
 	}
-	componentWillMount(){
-		if (localStorage.getItem('jwt')){
+	componentDidMount(){
+		if (localStorage.getItem('jwt') =! null){
 			this.setState({logged_in: true})
 		}
 	}
