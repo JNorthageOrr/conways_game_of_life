@@ -80,7 +80,7 @@ class App extends Component {
         url: "http://45.55.72.9:3000/api/users",
         type: "POST",
         contentType: "application/json; charset=utf-8",
-        data: newRequest,
+        data: JSON.stringify(newRequest),
         dataType: "json",
         success: function (newResult) {
           console.log(newResult)
