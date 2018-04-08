@@ -1,0 +1,3 @@
+Start the program from this folder using this command (& pushes it to background):
+
+serve -s build &
