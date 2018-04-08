@@ -3,11 +3,11 @@ import Header from './header';
 import Main from './Main';
 
 
-const Home = () => {
+const Home = () => (
 			<div>
 				<Header />
 				<Main />
 			</div>
-};
+		);
 
 export default Home;
