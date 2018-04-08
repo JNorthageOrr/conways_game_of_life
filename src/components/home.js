@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import Header from './header';
 import Main from './Main';
 
-const Home = () => (
-	<div>
-		<Header />
-		<Main />
-	</div>
-);
+
+class Home extends Component () {
+	state = {logged_in: false};
+
+	render(){
+		return(
+			<div>
+				<Header />
+				<Main />
+			</div>
+		)
+	}
+}
+
 export default Home;
