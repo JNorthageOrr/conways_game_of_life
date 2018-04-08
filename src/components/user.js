@@ -77,7 +77,7 @@ class App extends Component {
       console.log(newRequest)
       //changed from port 3000 to 5000
       $.ajax({
-        url: "http://45.55.72.9:3000/api/users",
+        url: "http://45.55.72.9:3000/api/users/new",
         type: "POST",
         data: newRequest,
         dataType: "json",
