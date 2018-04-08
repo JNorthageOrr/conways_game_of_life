@@ -3,17 +3,11 @@ import Header from './header';
 import Main from './Main';
 
 
-class Home extends Component () {
-	state = {logged_in: false};
-
-	render(){
-		return(
+const Home = () => {
 			<div>
 				<Header />
 				<Main />
 			</div>
-		)
-	}
-}
+};
 
 export default Home;
