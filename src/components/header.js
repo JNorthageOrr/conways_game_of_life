@@ -28,7 +28,6 @@ class Header extends React.Component {
 			      <ul>
 			        <li><Link to='/'>Home</Link></li>
 			        <li><Link to='/game'>Play Game</Link></li>
-			        <li><Link to='/pattern'>Pattern</Link></li>
 			      </ul>
 			      <ul className="loginLink">
 			      	<li><Link to='/' onClick={this.logoutSuccess}>Log Out</Link></li>
@@ -43,7 +42,6 @@ class Header extends React.Component {
 			      <ul>
 			        <li><Link to='/'>Home</Link></li>
 			        <li><Link to='/game'>Play Game</Link></li>
-			        <li><Link to='/pattern'>Pattern</Link></li>
 			      </ul>
 			      <ul className="loginLink">
 			      	<li><Link to='/user'>Login / Sign up</Link></li>
